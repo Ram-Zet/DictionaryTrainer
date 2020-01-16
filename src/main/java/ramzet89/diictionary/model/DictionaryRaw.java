@@ -47,6 +47,6 @@ public class DictionaryRaw {
 
     @Override
     public String toString() {
-        return String.format("%20s %s",getWord(), getTranslate());
+        return String.format("%-20s %s",getWord(), getTranslate());
     }
 }

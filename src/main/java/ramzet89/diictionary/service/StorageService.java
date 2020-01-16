@@ -12,6 +12,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
+
 @Service
 public class StorageService {
     private final static String fileName = "dictionary.txt";
@@ -38,8 +40,9 @@ public class StorageService {
         try {
             Path file = Paths.get(fileName);
             if (Files.exists(file)) {
-                Files.copy(file, Paths.get(fileName + ".tmp"));
+                Files.copy(file, Paths.get(fileName + ".tmp"), REPLACE_EXISTING);
             }
+            Files.delete(file);
             objectMapper.writeValue(new File(fileName), dictionary);
         } catch (IOException e) {
             ioHelper.print("Ошибка при записи файла");

@@ -35,12 +35,15 @@ public class LearningService {
             ioHelper.print("=================================");
             DictionaryRaw dictionaryRaw;
             Map<DictionaryRaw, Integer> rightMap;
-            if (random.nextInt(newWords.size() + repeatWords.size()) <= newWords.size()) {
+            if (newWords.size() > 0
+                    && random.nextInt(newWords.size() + repeatWords.size()) <= newWords.size()) {
                 dictionaryRaw = new ArrayList<>(newWords.keySet()).get(random.nextInt(newWords.size()));
                 rightMap = newWords;
-            } else {
+            } else if (repeatWords.size() > 0){
                 dictionaryRaw = new ArrayList<>(repeatWords.keySet()).get(random.nextInt(repeatWords.size()));
                 rightMap = repeatWords;
+            } else {
+                break;
             }
             ioHelper.print("word: " + dictionaryRaw.getWord());
             String userAnswer = ioHelper.readWord();
