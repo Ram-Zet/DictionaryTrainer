@@ -1,10 +1,10 @@
-package ramzet89.diictionary;
+package ramzet89.dictionary;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DiictionaryApplicationTests {
+class DictionaryApplicationTests {
 
     @Test
     void contextLoads() {

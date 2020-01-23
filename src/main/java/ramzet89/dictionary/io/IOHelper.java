@@ -1,7 +1,7 @@
-package ramzet89.diictionary.io;
+package ramzet89.dictionary.io;
 
 
-import ramzet89.diictionary.model.DictionaryRaw;
+import ramzet89.dictionary.model.DictionaryRaw;
 
 public interface IOHelper {
     String readWord();

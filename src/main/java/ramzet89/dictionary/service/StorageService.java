@@ -1,10 +1,10 @@
-package ramzet89.diictionary.service;
+package ramzet89.dictionary.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ramzet89.diictionary.io.IOHelper;
-import ramzet89.diictionary.model.Dictionary;
+import ramzet89.dictionary.io.IOHelper;
+import ramzet89.dictionary.model.Dictionary;
 
 import java.io.File;
 import java.io.IOException;

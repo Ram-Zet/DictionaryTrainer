@@ -1,8 +1,8 @@
-package ramzet89.diictionary.io;
+package ramzet89.dictionary.io;
 
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Service;
-import ramzet89.diictionary.model.DictionaryRaw;
+import ramzet89.dictionary.model.DictionaryRaw;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package ramzet89.diictionary.model;
+package ramzet89.dictionary.model;
 
 import java.util.ArrayList;
 import java.util.List;

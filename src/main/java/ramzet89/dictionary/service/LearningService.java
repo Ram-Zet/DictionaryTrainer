@@ -1,10 +1,10 @@
-package ramzet89.diictionary.service;
+package ramzet89.dictionary.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ramzet89.diictionary.io.IOHelper;
-import ramzet89.diictionary.model.Dictionary;
-import ramzet89.diictionary.model.DictionaryRaw;
+import ramzet89.dictionary.io.IOHelper;
+import ramzet89.dictionary.model.Dictionary;
+import ramzet89.dictionary.model.DictionaryRaw;
+import ramzet89.dictionary.model.WordCheckResult;
 
 import java.util.*;
 
@@ -16,11 +16,12 @@ public class LearningService {
     private final static Integer REPEAT_WORDS_COUNT = 5;
     private final StorageService storageService;
     private final IOHelper ioHelper;
+    private final WordCheckService wordCheckService;
 
-    @Autowired
-    public LearningService(StorageService storageService, IOHelper ioHelper) {
+    public LearningService(StorageService storageService, IOHelper ioHelper, WordCheckService wordCheckService) {
         this.storageService = storageService;
         this.ioHelper = ioHelper;
+        this.wordCheckService = wordCheckService;
     }
 
     public void prepareAndLearn() {
@@ -39,7 +40,7 @@ public class LearningService {
                     && random.nextInt(newWords.size() + repeatWords.size()) <= newWords.size()) {
                 dictionaryRaw = new ArrayList<>(newWords.keySet()).get(random.nextInt(newWords.size()));
                 rightMap = newWords;
-            } else if (repeatWords.size() > 0){
+            } else if (repeatWords.size() > 0) {
                 dictionaryRaw = new ArrayList<>(repeatWords.keySet()).get(random.nextInt(repeatWords.size()));
                 rightMap = repeatWords;
             } else {
@@ -47,24 +48,27 @@ public class LearningService {
             }
             ioHelper.print("word: " + dictionaryRaw.getWord());
             String userAnswer = ioHelper.readWord();
-            if (userAnswer.equalsIgnoreCase(dictionaryRaw.getTranslate())) {
-                Integer count = rightMap.get(dictionaryRaw);
-                count++;
-                if (count.equals(2)) {
-                    rightMap.remove(dictionaryRaw);
-                    dictionary.getNewWords().remove(dictionaryRaw);
-                    dictionary.getLearned().add(dictionaryRaw);
-                } else {
-                    rightMap.put(dictionaryRaw, count);
-                }
-            } else {
-                rightMap.remove(dictionaryRaw);
-                newWords.put(dictionaryRaw, 0);
-                System.out.println("Неверно. Верный ответ '" + dictionaryRaw.getTranslate() + "'");
+            WordCheckResult wordCheckResult = wordCheckService.checkWord(userAnswer, dictionaryRaw);
+            switch (wordCheckResult) {
+                case RIGHT:
+                    Integer count = rightMap.get(dictionaryRaw);
+                    count++;
+                    if (count == 2) {
+                        rightMap.remove(dictionaryRaw);
+                        dictionary.getNewWords().remove(dictionaryRaw);
+                        dictionary.getLearned().add(dictionaryRaw);
+                    }
+                    break;
+                case WRONG:
+                    rightMap.put(dictionaryRaw, 0);
+                    ioHelper.print("Неверно. Правильный ответ: '" + dictionaryRaw.getTranslate() + "'");
+                    break;
+                case NEED_LEARN:
+                    ioHelper.print("Почти. Правильный ответ: '" + dictionaryRaw.getTranslate() + "'");
             }
         }
 
-        System.out.println("Успещно выучено");
+        ioHelper.print("Успещно выучено");
         storageService.saveDictionary(dictionary);
     }
 

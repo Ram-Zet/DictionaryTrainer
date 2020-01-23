@@ -1,10 +1,10 @@
-package ramzet89.diictionary.service;
+package ramzet89.dictionary.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ramzet89.diictionary.io.IOHelper;
-import ramzet89.diictionary.model.Dictionary;
-import ramzet89.diictionary.model.DictionaryRaw;
+import ramzet89.dictionary.io.IOHelper;
+import ramzet89.dictionary.model.Dictionary;
+import ramzet89.dictionary.model.DictionaryRaw;
 
 import java.util.Objects;
 

@@ -1,7 +1,7 @@
-package ramzet89.diictionary.service;
+package ramzet89.dictionary.service;
 
 import org.springframework.stereotype.Service;
-import ramzet89.diictionary.io.IOHelper;
+import ramzet89.dictionary.io.IOHelper;
 
 import java.util.Collections;
 import java.util.HashMap;

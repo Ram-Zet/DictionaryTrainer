@@ -1,4 +1,4 @@
-package ramzet89.diictionary.config;
+package ramzet89.dictionary.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;
