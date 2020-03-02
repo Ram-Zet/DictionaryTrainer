@@ -12,8 +12,8 @@ import java.util.*;
 public class LearningService {
     private final static Random random = new Random();
 
-    private final static Integer NEW_WORDS_COUNT = 15;
-    private final static Integer REPEAT_WORDS_COUNT = 5;
+    private final static Integer NEW_WORDS_COUNT = 10;
+    private final static Integer REPEAT_WORDS_COUNT = 10;
     private final StorageService storageService;
     private final IOHelper ioHelper;
     private final WordCheckService wordCheckService;
@@ -57,6 +57,8 @@ public class LearningService {
                         rightMap.remove(dictionaryRaw);
                         dictionary.getNewWords().remove(dictionaryRaw);
                         dictionary.getLearned().add(dictionaryRaw);
+                    } else {
+                        rightMap.put(dictionaryRaw, count);
                     }
                     break;
                 case WRONG:
