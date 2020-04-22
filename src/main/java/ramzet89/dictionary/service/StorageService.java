@@ -16,7 +16,7 @@ import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
 @Service
 public class StorageService {
-    private final static String fileName = "dictionary.txt";
+    private final static String fileName = "dictionary.json";
 
     private final ObjectMapper objectMapper;
     private final IOHelper ioHelper;
