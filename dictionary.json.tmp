@@ -121,10 +121,6 @@
       "translate": "надевать одежду"
     },
     {
-      "word": "honest",
-      "translate": "честный"
-    },
-    {
       "word": "gist",
       "translate": "суть"
     },
@@ -159,10 +155,6 @@
     {
       "word": "bulk",
       "translate": "объем, масса"
-    },
-    {
-      "word": "to notice",
-      "translate": "замечать"
     },
     {
       "word": "annoyance",
@@ -285,10 +277,6 @@
       "translate": "уменьшать, снижать"
     },
     {
-      "word": "to acknowledge",
-      "translate": "подтверждать"
-    },
-    {
       "word": "around the same time",
       "translate": "примерно в то же время"
     },
@@ -303,10 +291,6 @@
     {
       "word": "evidence",
       "translate": "доказательства"
-    },
-    {
-      "word": "to compete",
-      "translate": "конкурировать"
     },
     {
       "word": "arbitrary",
@@ -359,14 +343,6 @@
     {
       "word": "whatever",
       "translate": "любой"
-    },
-    {
-      "word": "to encourage",
-      "translate": "поощрять, способствовать"
-    },
-    {
-      "word": "to deserve",
-      "translate": "заслуживать"
     },
     {
       "word": "tardiness",
@@ -429,20 +405,12 @@
       "translate": "оставить это при себе"
     },
     {
-      "word": "reminiscent",
-      "translate": "напоминающий"
-    },
-    {
       "word": "a package holiday",
       "translate": "тур все включено"
     },
     {
       "word": "benifit",
       "translate": "выгода"
-    },
-    {
-      "word": "jealous",
-      "translate": "ревнивый"
     },
     {
       "word": "it's by no means",
@@ -561,10 +529,6 @@
       "translate": "предостережение"
     },
     {
-      "word": "ring",
-      "translate": "звонок"
-    },
-    {
       "word": "a restriction",
       "translate": "ограничение"
     },
@@ -637,10 +601,6 @@
       "translate": "почти"
     },
     {
-      "word": "by the way",
-      "translate": "кстати"
-    },
-    {
       "word": "to dissolve",
       "translate": "растворять"
     },
@@ -665,16 +625,8 @@
       "translate": "справедливый"
     },
     {
-      "word": "a stipulation",
-      "translate": "условие, оговорка"
-    },
-    {
       "word": "sojorn",
       "translate": "пребывание"
-    },
-    {
-      "word": "to estimate",
-      "translate": "предполагать"
     },
     {
       "word": "to consider",
@@ -725,10 +677,6 @@
       "translate": "полностью прожарен"
     },
     {
-      "word": "to vanish",
-      "translate": "пропадать"
-    },
-    {
       "word": "bunch",
       "translate": "букет, связка, пучок"
     },
@@ -767,10 +715,6 @@
     {
       "word": "a wet blanket",
       "translate": "зануда"
-    },
-    {
-      "word": "to operate",
-      "translate": "управлять, воздействовать"
     },
     {
       "word": "to wear clothes",
@@ -869,20 +813,8 @@
       "translate": "улучшать, увеличивать"
     },
     {
-      "word": "absence",
-      "translate": "отсутствие"
-    },
-    {
       "word": "to try on",
       "translate": "примерять"
-    },
-    {
-      "word": "changing room",
-      "translate": "примерочная"
-    },
-    {
-      "word": "aicraft",
-      "translate": "воздушное судно"
     },
     {
       "word": "to be keen on",
@@ -1117,10 +1049,6 @@
       "translate": "завести друзей"
     },
     {
-      "word": "to overlay",
-      "translate": "перекрывать, покрывать"
-    },
-    {
       "word": "altimately",
       "translate": "в конце концов, в итоге"
     },
@@ -1237,10 +1165,6 @@
       "translate": "гром"
     },
     {
-      "word": "extent",
-      "translate": "степень"
-    },
-    {
       "word": "to avoid",
       "translate": "избегать"
     },
@@ -1291,6 +1215,162 @@
     {
       "word": "to hint",
       "translate": "намекать"
+    },
+    {
+      "word": "to decrease",
+      "translate": "уменьшать"
+    },
+    {
+      "word": "noun",
+      "translate": "существительное"
+    },
+    {
+      "word": "toy boy",
+      "translate": "любовник старой женщины"
+    },
+    {
+      "word": "absence",
+      "translate": "отсутствие"
+    },
+    {
+      "word": "think of",
+      "translate": "мнение о"
+    },
+    {
+      "word": "to acknowledge",
+      "translate": "подтверждать"
+    },
+    {
+      "word": "engagement",
+      "translate": "помолвка"
+    },
+    {
+      "word": "to operate",
+      "translate": "управлять, воздействовать"
+    },
+    {
+      "word": "arrangements",
+      "translate": "договоренности"
+    },
+    {
+      "word": "to encourage",
+      "translate": "поощрять, способствовать"
+    },
+    {
+      "word": "in a bad mood",
+      "translate": "в плохом настроении"
+    },
+    {
+      "word": "ring",
+      "translate": "звонок"
+    },
+    {
+      "word": "circumstance",
+      "translate": "обстоятельство"
+    },
+    {
+      "word": "to overlay",
+      "translate": "перекрывать, покрывать"
+    },
+    {
+      "word": "sewing",
+      "translate": "шитье"
+    },
+    {
+      "word": "to vanish",
+      "translate": "пропадать"
+    },
+    {
+      "word": "goofy",
+      "translate": "бестолковый, глупый"
+    },
+    {
+      "word": "jealous",
+      "translate": "ревнивый"
+    },
+    {
+      "word": "reminiscent",
+      "translate": "напоминающий"
+    },
+    {
+      "word": "to deserve",
+      "translate": "заслуживать"
+    },
+    {
+      "word": "pay you back",
+      "translate": "возвращать долг"
+    },
+    {
+      "word": "to compete",
+      "translate": "конкурировать"
+    },
+    {
+      "word": "changing room",
+      "translate": "примерочная"
+    },
+    {
+      "word": "unkind",
+      "translate": "злой"
+    },
+    {
+      "word": "honest",
+      "translate": "честный"
+    },
+    {
+      "word": "talkative",
+      "translate": "разговорчивый, общительный"
+    },
+    {
+      "word": "to notice",
+      "translate": "замечать"
+    },
+    {
+      "word": "comissioned",
+      "translate": "заказан"
+    },
+    {
+      "word": "to get in touch with",
+      "translate": "связаться с"
+    },
+    {
+      "word": "by the way",
+      "translate": "кстати"
+    },
+    {
+      "word": "obesity",
+      "translate": "ожирение"
+    },
+    {
+      "word": "it cuts my ears",
+      "translate": "режет слух"
+    },
+    {
+      "word": "extent",
+      "translate": "степень"
+    },
+    {
+      "word": "to emphasis",
+      "translate": "делать ударение"
+    },
+    {
+      "word": "to take it from the tip of my tongue",
+      "translate": "снять с языка"
+    },
+    {
+      "word": "aicraft",
+      "translate": "воздушное судно"
+    },
+    {
+      "word": "a stipulation",
+      "translate": "условие, оговорка"
+    },
+    {
+      "word": "to get off sb's back",
+      "translate": "перестать критиковать, оставить в покое"
+    },
+    {
+      "word": "to estimate",
+      "translate": "предполагать"
     }
   ],
   "newWords": [
@@ -1301,10 +1381,6 @@
     {
       "word": "scope",
       "translate": "масштаб"
-    },
-    {
-      "word": "to decrease",
-      "translate": "уменьшать"
     },
     {
       "word": "nod",
@@ -1335,10 +1411,6 @@
       "translate": "бедный, ненасыщенный"
     },
     {
-      "word": "it cuts my ears",
-      "translate": "режет слух"
-    },
-    {
       "word": "aim",
       "translate": "цель"
     },
@@ -1357,10 +1429,6 @@
     {
       "word": "self absessed",
       "translate": "зацикленный на себе"
-    },
-    {
-      "word": "in a bad mood",
-      "translate": "в плохом настроении"
     },
     {
       "word": "to get stuck",
@@ -1403,16 +1471,12 @@
       "translate": "разрабатывать"
     },
     {
-      "word": "to emphasis",
-      "translate": "делать ударение"
-    },
-    {
       "word": "a competitor",
       "translate": "конкурент"
     },
     {
       "word": "opaque",
-      "translate": "тмный"
+      "translate": "темный"
     },
     {
       "word": "couple years",
@@ -1487,16 +1551,8 @@
       "translate": "глассный звук"
     },
     {
-      "word": "to get in touch with",
-      "translate": "связаться с"
-    },
-    {
       "word": "to go to bed early",
       "translate": "ложиться в постель пораньше"
-    },
-    {
-      "word": "talkative",
-      "translate": "разговорчивый, общительный"
     },
     {
       "word": "kind",
@@ -1505,10 +1561,6 @@
     {
       "word": "shy",
       "translate": "стеснительный"
-    },
-    {
-      "word": "unkind",
-      "translate": "злой"
     },
     {
       "word": "solace",
@@ -1567,10 +1619,6 @@
       "translate": "гражданский, городской"
     },
     {
-      "word": "comissioned",
-      "translate": "заказан"
-    },
-    {
       "word": "to admire",
       "translate": "любоваться"
     },
@@ -1621,10 +1669,6 @@
     {
       "word": "to get lost",
       "translate": "потеряться"
-    },
-    {
-      "word": "to get off sb's back",
-      "translate": "перестать критиковать, оставить в покое"
     },
     {
       "word": "in trouble with",
@@ -1699,18 +1743,6 @@
       "translate": "прогнозирование, предсказание"
     },
     {
-      "word": "arrangements",
-      "translate": "договоренности"
-    },
-    {
-      "word": "pay you back",
-      "translate": "возвращать долг"
-    },
-    {
-      "word": "think of",
-      "translate": "мнение о"
-    },
-    {
       "word": "think about smth",
       "translate": "думать о"
     },
@@ -1733,14 +1765,6 @@
     {
       "word": "prerequisite",
       "translate": "предпосылка"
-    },
-    {
-      "word": "noun",
-      "translate": "существительное"
-    },
-    {
-      "word": "toy boy",
-      "translate": "любовник старой женщины"
     },
     {
       "word": "rage",
@@ -1813,10 +1837,6 @@
     {
       "word": "bridegroom",
       "translate": "жених"
-    },
-    {
-      "word": "sewing",
-      "translate": "шитье"
     },
     {
       "word": "to sew",
@@ -1963,10 +1983,6 @@
       "translate": "усиливать, осложнять"
     },
     {
-      "word": "circumstance",
-      "translate": "обстоятельство"
-    },
-    {
       "word": "anxious",
       "translate": "озабоченный, тревожный"
     },
@@ -1981,10 +1997,6 @@
     {
       "word": "circumstances",
       "translate": "обстоятельства"
-    },
-    {
-      "word": "obesity",
-      "translate": "ожирение"
     },
     {
       "word": "peas",
@@ -2023,14 +2035,6 @@
       "translate": "огромный"
     },
     {
-      "word": "engagement",
-      "translate": "помолвка"
-    },
-    {
-      "word": "goofy",
-      "translate": "бестолковый, глупый"
-    },
-    {
       "word": "to admit",
       "translate": "признавать"
     },
@@ -2065,10 +2069,6 @@
     {
       "word": "I have no clue",
       "translate": "у меня нет идей"
-    },
-    {
-      "word": "to take it from the tip of my tongue",
-      "translate": "нять у меня с языка"
     },
     {
       "word": "to burst",
