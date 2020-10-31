@@ -11,6 +11,7 @@ public class DictionaryApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(DictionaryApplication.class, args);
         run.getBean(MainMenuService.class).mainMenu();
+
     }
 
 }

@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: ${databasedb.url}
+    driver-class-name: org.postgresql.Driver
+    username: ${databasedb.username}
+    password: ${databasedb.password}

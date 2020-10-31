@@ -1,16 +1,12 @@
 package ramzet89.dictionary;
 
-import com.sun.deploy.util.StringUtils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-
-import static org.springframework.util.StringUtils.split;
 
 public class Solution {
     public static String firstFileName;

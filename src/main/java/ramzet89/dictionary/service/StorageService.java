@@ -49,6 +49,10 @@ public class StorageService {
         }
     }
 
+    public void moveToDb(Dictionary dictionary) {
+
+    }
+
     public void printDictionary(Dictionary dictionary) {
         ioHelper.print("=====NEW WORDS=====");
         dictionary.getNewWords().forEach(e -> ioHelper.print(e.toString()));

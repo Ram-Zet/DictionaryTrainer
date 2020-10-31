@@ -58,6 +58,7 @@ public class MainMenuService {
         INPUT("1. Занести в словарь", "1"),
         LEARN("2. Учить слова", "2"),
         DICTIONARY("3. Показать словарь", "3"),
+        MOVE_TO_DB("6. Мигрировать данные в DB", "4"),
         EXIT("0. Выход", "0");
 
         Menu(String item, String num) {
