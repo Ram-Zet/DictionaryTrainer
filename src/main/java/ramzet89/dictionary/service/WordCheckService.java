@@ -21,20 +21,20 @@ public class WordCheckService {
 
     public WordCheckResult checkWord(String userAnswer,
                                      DictionaryRaw rightRaw) {
-        Set<String> rightAnswers = answerToSetUpperCase(rightRaw.getTranslate());
-        Set<String> userAnswers = answerToSetUpperCase(userAnswer);
-        int rightCount = 0;
-        for (String answer : userAnswers) {
-            if (rightAnswers.contains(answer)) {
-                rightCount++;
-            }
-        }
-        if (rightCount == 0) {
-            return WordCheckResult.WRONG;
-        }
-        if (rightCount == rightAnswers.size()) {
-            return WordCheckResult.RIGHT;
-        }
+//        Set<String> rightAnswers = answerToSetUpperCase(rightRaw.getTranslate());
+//        Set<String> userAnswers = answerToSetUpperCase(userAnswer);
+//        int rightCount = 0;
+//        for (String answer : userAnswers) {
+//            if (rightAnswers.contains(answer)) {
+//                rightCount++;
+//            }
+//        }
+//        if (rightCount == 0) {
+//            return WordCheckResult.WRONG;
+//        }
+//        if (rightCount == rightAnswers.size()) {
+//            return WordCheckResult.RIGHT;
+//        }
         return WordCheckResult.NEED_LEARN;
     }
 

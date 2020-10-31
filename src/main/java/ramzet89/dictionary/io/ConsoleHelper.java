@@ -1,6 +1,5 @@
 package ramzet89.dictionary.io;
 
-import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Service;
 import ramzet89.dictionary.model.DictionaryRaw;
 
@@ -24,21 +23,8 @@ public class ConsoleHelper implements IOHelper {
 
     @Override
     public DictionaryRaw readDictionaryPair() {
-        try {
-            System.out.println("word: ");
-            String word = reader.readLine();
-            if (Strings.isEmpty(word)) {
-                return null;
-            }
-            System.out.println("translate: ");
-            String translate = reader.readLine();
-            DictionaryRaw dictionaryRaw = new DictionaryRaw();
-            dictionaryRaw.setWord(word);
-            dictionaryRaw.setTranslate(translate);
-            return dictionaryRaw;
-        } catch (IOException e) {
-            return null;
-        }
+        //TODO
+        return new DictionaryRaw();
     }
 
     @Override

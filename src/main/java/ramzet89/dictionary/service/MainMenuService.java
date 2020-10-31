@@ -28,10 +28,9 @@ public class MainMenuService {
 
         Map<Menu, Runnable> map = new HashMap<>();
         map.put(Menu.INPUT, dictionaryFillService::fillDictionary);
-        map.put(Menu.LEARN, learningService::prepareAndLearn);
+//        map.put(Menu.LEARN, learningService::prepareAndLearn);
         map.put(Menu.DICTIONARY,
                 () -> storageService.printDictionary(storageService.getDictionary()));
-        map.put(Menu.MOVE_TO_DB, dictionaryFillService::moveToDb);
         map.put(Menu.EXIT,
                 () -> System.exit(0));
         methods = Collections.unmodifiableMap(map);
@@ -59,7 +58,6 @@ public class MainMenuService {
         INPUT("1. Занести в словарь", "1"),
         LEARN("2. Учить слова", "2"),
         DICTIONARY("3. Показать словарь", "3"),
-        MOVE_TO_DB("6. Мигрировать данные в DB", "6"),
         EXIT("0. Выход", "0");
 
         Menu(String item, String num) {

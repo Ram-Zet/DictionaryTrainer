@@ -1,25 +1,11 @@
 package ramzet89.dictionary.model;
 
-import java.util.ArrayList;
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class Dictionary {
-    List<DictionaryRaw> learned = new ArrayList<>();
-    List<DictionaryRaw> newWords = new ArrayList<>();
+    private List<DictionaryRaw> dictionaryRaws;
 
-    public List<DictionaryRaw> getLearned() {
-        return learned;
-    }
-
-    public void setLearned(List<DictionaryRaw> learned) {
-        this.learned = learned;
-    }
-
-    public List<DictionaryRaw> getNewWords() {
-        return newWords;
-    }
-
-    public void setNewWords(List<DictionaryRaw> newWords) {
-        this.newWords = newWords;
-    }
 }
