@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="amaslovskiy" id="002">
+        <sql>
+            CREATE TABLE  application.dictionary (
+            id              bigserial   PRIMARY KEY,
+            english         varchar     NOT NULL    UNIQUE,
+            russian         varchar     NOT NULL,
+            russian2        varchar,
+            russian3        varchar,
+            transcription   varchar,
+            attempts        int         NOT NULL    default 0,
+            failures        int         NOT NULL    default 0
+            );
+
+            CREATE UNIQUE INDEX english_idx ON application.dictionary (english);
+
+            COMMENT ON TABLE application.dictionary is 'English-Russian dictionary';
+            COMMENT ON COLUMN application.dictionary.english is 'English word';
+            COMMENT ON COLUMN application.dictionary.russian is 'Russian traslation';
+            COMMENT ON COLUMN application.dictionary.transcription is 'Transcription';
+            COMMENT ON COLUMN application.dictionary.attempts is 'Number of attempts to translate eng-russ';
+            COMMENT ON COLUMN application.dictionary.failures is 'Number of fully-incorrect answers';
+
+        </sql>
+    </changeSet>
+</databaseChangeLog>

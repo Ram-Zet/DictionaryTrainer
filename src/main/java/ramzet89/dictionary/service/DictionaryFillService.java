@@ -32,4 +32,9 @@ public class DictionaryFillService {
         }
         storageService.saveDictionary(dictionary);
     }
+
+    public void moveToDb() {
+        Dictionary dictionary = storageService.getDictionary();
+        storageService.moveToDb(dictionary);
+    }
 }

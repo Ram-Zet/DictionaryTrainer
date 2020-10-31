@@ -1,6 +1,9 @@
 spring:
   datasource:
-    url: ${databasedb.url}
+    url: localohost
     driver-class-name: org.postgresql.Driver
-    username: ${databasedb.username}
-    password: ${databasedb.password}
+    username: username
+    password: password
+
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.xml

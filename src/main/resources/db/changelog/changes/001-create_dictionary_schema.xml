@@ -8,7 +8,7 @@
 
     <changeSet author="admin" id="001">
         <sql>
-            CREATE SCHEMA IF NOT EXISTS dictionaries;
+            CREATE SCHEMA IF NOT EXISTS application;
         </sql>
     </changeSet>
 </databaseChangeLog>

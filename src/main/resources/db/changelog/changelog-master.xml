@@ -7,5 +7,6 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <include file="/db/changelog/changes/001-create_dictionary_schema.xml"/>
+    <include file="/db/changelog/changes/002-create_dictionary_table.xml"/>
 
 </databaseChangeLog>
