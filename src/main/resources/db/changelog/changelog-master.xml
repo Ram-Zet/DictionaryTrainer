@@ -8,5 +8,6 @@
 
     <include file="/db/changelog/changes/001-create_dictionary_schema.xml"/>
     <include file="/db/changelog/changes/002-create_dictionary_table.xml"/>
+    <include file="/db/changelog/changes/003-add_users_table_and_user_roles.xml"/>
 
 </databaseChangeLog>
