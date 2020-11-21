@@ -7,3 +7,9 @@ spring:
 
   liquibase:
     change-log: classpath:/db/changelog/changelog-master.xml
+
+learn:
+  getwordstolearn:
+    newwords: 10
+    repeatwords: 7
+    difficultwords: 3
