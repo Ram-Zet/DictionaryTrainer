@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <databaseChangeLog
-        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-    <include file="/db/changelog/changes/001-create_dictionary_schema.xml"/>
-    <include file="/db/changelog/changes/002-create_dictionary_table.xml"/>
-    <include file="/db/changelog/changes/003-add_users_table_and_user_roles.xml"/>
-    <include file="/db/changelog/changes/004-change_english_constraint.xml"/>
+    <changeSet author="amaslovskiy" id="004">
+        <sql>
+            ALTER TABLE application.dictionary DROP CONSTRAINT dictionary_english_key;
 
+            CREATE UNIQUE INDEX user_english_unique_index ON application.dictionary (user_id, english);
+        </sql>
+    </changeSet>
 </databaseChangeLog>
