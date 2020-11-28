@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: localohost
+    url: localhost
     driver-class-name: org.postgresql.Driver
     username: username
     password: password
@@ -10,6 +10,7 @@ spring:
 
 learn:
   getwordstolearn:
-    newwords: 10
-    repeatwords: 7
-    difficultwords: 3
+    newWordsCount: 8
+    repeatWordsRandomCount: 4
+    repeatWordsElderCount: 4
+    repeatWordsDifficultCount: 4

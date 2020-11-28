@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Getter
@@ -30,6 +31,17 @@ public class DictionaryEntity {
     private Integer attempts = 0;
 
     private Integer failures = 0;
+
+    @Column(name = "attempt_date")
+    private LocalDateTime attemptDate;
+
+    @Column(name = "difficulty_coefficient")
+    private double difficultyCoefficient;
+
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private UserEntity user;
 
     @Override
     public boolean equals(Object o) {
