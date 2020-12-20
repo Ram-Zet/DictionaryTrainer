@@ -36,7 +36,7 @@ public class DictionaryEntity {
     private LocalDateTime attemptDate;
 
     @Column(name = "difficulty_coefficient")
-    private double difficultyCoefficient;
+    private Double difficultyCoefficient;
 
 
     @ManyToOne(fetch = FetchType.LAZY)

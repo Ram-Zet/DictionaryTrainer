@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 import ramzet89.dictionary.model.request.GetWordsToLearnRequest;
 import ramzet89.dictionary.model.response.GetWordstoLearnResponse;
 
-public interface WordsService {
+public interface GetWordsService {
     GetWordstoLearnResponse getWordsToLearns(@NotNull GetWordsToLearnRequest request,
                                              @NotNull Long userId);
 }

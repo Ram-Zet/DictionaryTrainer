@@ -6,6 +6,7 @@ import ramzet89.dictionary.db.entity.DictionaryEntity;
 import ramzet89.dictionary.db.entity.UserEntity;
 import ramzet89.dictionary.db.repository.ext.DictionaryRepositoryExt;
 
+import java.util.List;
 import java.util.Set;
 
 public interface DictionaryRepository extends JpaRepository<DictionaryEntity, Long>, DictionaryRepositoryExt {
@@ -15,6 +16,9 @@ public interface DictionaryRepository extends JpaRepository<DictionaryEntity, Lo
 
     @Query("SELECT d.id FROM DictionaryEntity d WHERE d.user = :user AND d.attempts > 0")
     Set<Long> getAllRepeatWordsIds(UserEntity user);
+
+    @Query("SELECT d FROM DictionaryEntity d WHERE d.user = :user AND d.id IN :ids")
+    List<DictionaryEntity> findAllByIdAndUser(Set<Long> ids, UserEntity user);
 
 
 }

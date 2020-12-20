@@ -20,18 +20,18 @@ public class DictionaryRepositoryExtImpl implements DictionaryRepositoryExt {
                 "WHERE d.user = :user AND d.id IN :scope " +
                 "ORDER BY d.attemptDate");
         query.setParameter("user", userEntity);
-        query.setParameter("scope", scope.toArray());
+        query.setParameter("scope", scope);
         query.setMaxResults(count);
         return query.getResultList();
     }
 
     @Override
     public List<Long> getDifficultRepeatWordsIds(Set<Long> scope, int count, UserEntity userEntity) {
-        Query query = em.createQuery("SELECT d FROM DictionaryEntity d " +
+        Query query = em.createQuery("SELECT d.id FROM DictionaryEntity d " +
                 "WHERE d.user = :user AND d.id IN :scope " +
                 "ORDER BY d.difficultyCoefficient DESC")
                 .setParameter("user", userEntity)
-                .setParameter("scope", scope.toArray())
+                .setParameter("scope", scope)
                 .setMaxResults(count);
         return query.getResultList();
     }

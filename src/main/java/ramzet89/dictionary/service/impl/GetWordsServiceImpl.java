@@ -11,20 +11,18 @@ import ramzet89.dictionary.db.repository.UserRepository;
 import ramzet89.dictionary.mapper.DictionaryMapper;
 import ramzet89.dictionary.model.request.GetWordsToLearnRequest;
 import ramzet89.dictionary.model.response.GetWordstoLearnResponse;
-import ramzet89.dictionary.service.WordsService;
+import ramzet89.dictionary.service.GetWordsService;
 import ramzet89.dictionary.util.CustomCollectionRandomizer;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 import java.util.Set;
 
 
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
-public class WordsServiceImpl implements WordsService {
-    private final static Random rand = new Random();
+public class GetWordsServiceImpl implements GetWordsService {
     private final DictionaryRepository dictionaryRepository;
     private final UserRepository userRepository;
     private final DictionaryMapper dictionaryMapper;
@@ -36,23 +34,23 @@ public class WordsServiceImpl implements WordsService {
         Set<Long> ids = getWordsIds(request, user);
         List<DictionaryEntity> resultWords = dictionaryRepository.findAllById(ids);
         return GetWordstoLearnResponse.builder()
-                .dictionaryRecordList(dictionaryMapper.toDictionaryRecordList(resultWords))
+                .words(dictionaryMapper.toDictionaryRecordList(resultWords))
                 .build();
     }
 
     private Set<Long> getWordsIds(GetWordsToLearnRequest request, UserEntity user) {
-        Set<Long> resultIds = getNewWordsIds(request.getNewWordsCount(), user);
-        Set<Long> repeatIds = getRepeatIds(request, user);
+        Set<Long> resultIds = getNewWordsIdsRandom(request.getNewWordsCount(), user);
+        Set<Long> repeatIds = getRepeatIdsRandom(request, user);
         resultIds.addAll(repeatIds);
         return resultIds;
     }
 
-    private Set<Long> getNewWordsIds(int count, UserEntity user) {
+    private Set<Long> getNewWordsIdsRandom(int count, UserEntity user) {
         Set<Long> ids = Collections.unmodifiableSet(dictionaryRepository.getNewWordsIds(user));
         return CustomCollectionRandomizer.getRandomItemIds(ids, count);
     }
 
-    private Set<Long> getRepeatIds(GetWordsToLearnRequest request, UserEntity user) {
+    private Set<Long> getRepeatIdsRandom(GetWordsToLearnRequest request, UserEntity user) {
         //all
         Set<Long> allRepeatWordsIds = dictionaryRepository.getAllRepeatWordsIds(user);
         if (allRepeatWordsIds.isEmpty()) {
@@ -65,7 +63,7 @@ public class WordsServiceImpl implements WordsService {
             return resultIds;
         }
         //oldest
-        List<Long> oldestRepeatWordsIds = dictionaryRepository.getOldestRepeatWordsIds(resultIds, request.getRepeatWordsElderCount(), user);
+        List<Long> oldestRepeatWordsIds = dictionaryRepository.getOldestRepeatWordsIds(allRepeatWordsIds, request.getRepeatWordsElderCount(), user);
         resultIds.addAll(oldestRepeatWordsIds);
         allRepeatWordsIds.removeAll(oldestRepeatWordsIds);
         if (allRepeatWordsIds.isEmpty()) {
