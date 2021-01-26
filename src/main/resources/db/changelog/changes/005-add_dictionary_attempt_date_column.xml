@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="amaslovskiy" id="005">
+        <sql>
+            ALTER TABLE application.dictionary ADD COLUMN attempt_date timestamp
+            CHECK (
+            (attempts = 0 AND attempt_date IS NULL) OR (attempts > 0 AND attempt_date IS NOT NULL)
+            );
+
+            COMMENT ON COLUMN application.dictionary.attempt_date IS 'Дата последней попытки';
+
+        </sql>
+        <comment>
+            Добавил дату последней попытки
+        </comment>
+    </changeSet>
+</databaseChangeLog>

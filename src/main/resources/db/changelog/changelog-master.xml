@@ -10,5 +10,7 @@
     <include file="/db/changelog/changes/002-create_dictionary_table.xml"/>
     <include file="/db/changelog/changes/003-add_users_table_and_user_roles.xml"/>
     <include file="/db/changelog/changes/004-change_english_constraint.xml"/>
+    <include file="/db/changelog/changes/005-add_dictionary_attempt_date_column.xml"/>
+    <include file="/db/changelog/changes/006-add_dictionary_difficulty_coefficient_column.xml"/>
 
 </databaseChangeLog>
