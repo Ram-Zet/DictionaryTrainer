@@ -3,6 +3,7 @@ package ramzet89.dictionary.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import ramzet89.dictionary.model.request.GetWordsToLearnRequest;
 import ramzet89.dictionary.model.request.SaveLearnedRequest;
@@ -14,8 +15,9 @@ import ramzet89.dictionary.service.impl.GetWordsServiceImpl;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/learn")
+@RequestMapping("api/v1/learn")
 @RequiredArgsConstructor
+@PreAuthorize("hasAnyAuthority('user:learn', 'user:add')")
 public class LearnController {
 
     private final GetWordsServiceImpl wordsService;
