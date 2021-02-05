@@ -14,3 +14,8 @@ learn:
     repeatWordsRandomCount: 4
     repeatWordsElderCount: 4
     repeatWordsDifficultCount: 4
+
+jwt:
+  header: Authorization
+  secret: test
+  expiration: 7200

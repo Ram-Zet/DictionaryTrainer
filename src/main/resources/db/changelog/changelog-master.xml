@@ -13,5 +13,6 @@
     <include file="/db/changelog/changes/005-add_dictionary_attempt_date_column.xml"/>
     <include file="/db/changelog/changes/006-add_dictionary_difficulty_coefficient_column.xml"/>
     <include file="/db/changelog/changes/007-change_password_field_length.xml"/>
+    <include file="/db/changelog/changes/008-change_user_roles.xml"/>
 
 </databaseChangeLog>

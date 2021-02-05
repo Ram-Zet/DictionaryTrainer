@@ -10,7 +10,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @Entity
 @Getter
@@ -36,15 +35,12 @@ public class UserEntity {
 
     private boolean enabled = false;
 
-    @ElementCollection(targetClass = UserRole.class, fetch = FetchType.EAGER)
-    @JoinTable(schema = "application", name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
-    @Column(name = "role", nullable = false)
     @Enumerated(EnumType.STRING)
-    private Set<UserRole> userRoles;
+    @Column(name = "role")
+    private UserRole userRole;
 
     public Set<SimpleGrantedAuthority> getAuthorities() {
-        return userRoles.stream().flatMap(userRole -> userRole.getAuthorities().stream())
-                .collect(Collectors.toSet());
+        return userRole.getAuthorities();
     }
 
 }

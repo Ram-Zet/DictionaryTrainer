@@ -15,7 +15,7 @@ import ramzet89.dictionary.service.impl.GetWordsServiceImpl;
 import java.util.Set;
 
 @RestController
-@RequestMapping("api/v1/learn")
+@RequestMapping("/api/v1/learn")
 @RequiredArgsConstructor
 @PreAuthorize("hasAnyAuthority('user:learn', 'user:add')")
 public class LearnController {
@@ -40,14 +40,12 @@ public class LearnController {
                 .repeatWordsDifficultCount(repeatWordsDifficult)
                 .build();
 
-        //TODO - security
         GetWordstoLearnResponse response = wordsService.getWordsToLearns(learnRequest, 1L);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
     @PostMapping("/savelearned")
     public ResponseEntity<SaveLearnedResponse> saveLearned(@RequestBody SaveLearnedRequest saveLearnedRequest) {
-        //TODO - security
         Set<Long> savedWordsIds = saveLearnedService.saveLearningResult(saveLearnedRequest, 1L);
         SaveLearnedResponse saveLearnedResponse = new SaveLearnedResponse(savedWordsIds);
         return new ResponseEntity<>(saveLearnedResponse, HttpStatus.OK);
