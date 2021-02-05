@@ -3,6 +3,8 @@ package ramzet89.dictionary.db.entity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import ramzet89.dictionary.enums.security.UserRole;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -16,6 +18,7 @@ import java.util.Set;
 @Table(schema = "application",  name = "users")
 public class UserEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
@@ -23,13 +26,21 @@ public class UserEntity {
     private String username;
 
     @NotNull
+    @Size(min = 5, max = 72)
+    private String password;
+
+    @NotNull
     @Size(min = 2, max = 50)
     private String email;
 
-    @ElementCollection(targetClass = UserRole.class)
-    @JoinTable(schema = "application", name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
-    @Column(name = "role", nullable = false)
+    private boolean enabled = false;
+
     @Enumerated(EnumType.STRING)
-    private Set<UserRole> userRoles;
+    @Column(name = "role")
+    private UserRole userRole;
+
+    public Set<SimpleGrantedAuthority> getAuthorities() {
+        return userRole.getAuthorities();
+    }
 
 }
