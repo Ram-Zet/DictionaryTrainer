@@ -2,6 +2,7 @@ package ramzet89.dictionary.db.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -10,6 +11,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @Entity
+@ToString
 @Table(schema = "application", name = "dictionary")
 public class DictionaryEntity {
     @Id

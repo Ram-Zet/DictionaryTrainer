@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/dictionary-dev
+    url: jdbc:postgresql://localhost:5432/dictionary-test
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: 12345678
@@ -11,7 +11,7 @@ spring:
     show-sql: true
 
 learn:
-  getwordstolearn:
+  getWordsToLearn:
     newWordsCount: 8
     repeatWordsRandomCount: 4
     repeatWordsElderCount: 4
