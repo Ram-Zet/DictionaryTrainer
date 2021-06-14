@@ -10,7 +10,7 @@
     </parent>
     <groupId>ramzet89</groupId>
     <artifactId>dictionary</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>dictionary</name>
     <description>Dictionary trainer</description>
 

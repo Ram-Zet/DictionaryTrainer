@@ -17,7 +17,7 @@ import java.util.Set;
 @RestController
 @RequestMapping("/api/v1/learn")
 @RequiredArgsConstructor
-@PreAuthorize("hasAnyAuthority('user:learn', 'user:add')")
+@PreAuthorize("hasAnyAuthority('user:learn')")
 public class LearnController {
 
     private final GetWordsServiceImpl wordsService;

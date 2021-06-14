@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 @Getter
 public enum Permission {
     USER_LEARN("user:learn"),
-    USER_ADD("user:add"),
+    USER_ADD_WORDS("user:add_words"),
     ADMIN_USERS("admin:users");
 
     private final String permission;

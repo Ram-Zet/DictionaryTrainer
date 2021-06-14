@@ -1,8 +1,9 @@
 package ramzet89.dictionary.model.response;
 
 import lombok.*;
+import ramzet89.dictionary.model.commons.DictionaryRecord;
 
-import java.util.Set;
+import java.util.List;
 
 @Getter
 @Setter
@@ -10,5 +11,5 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SaveLearnedResponse {
-    private Set<Long> savedWordsIds;
+    private List<DictionaryRecord> saved;
 }

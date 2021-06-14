@@ -13,8 +13,8 @@ import static ramzet89.dictionary.enums.security.Permission.*;
 @Getter
 @RequiredArgsConstructor
 public enum UserRole {
-    ADMIN(Set.of(ADMIN_USERS, USER_LEARN, USER_ADD)),
-    USER(Set.of(USER_ADD, USER_LEARN));
+    ADMIN(Set.of(ADMIN_USERS, USER_LEARN, USER_ADD_WORDS)),
+    USER(Set.of(USER_ADD_WORDS, USER_LEARN));
 
     private final Set<Permission> permissions;
 
