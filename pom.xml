@@ -17,7 +17,7 @@
     <properties>
         <java.version>11</java.version>
         <testcontainers.version>1.15.2</testcontainers.version>
-        <liquibase.version>4.3.1</liquibase.version>
+        <liquibase.version>4.8.0</liquibase.version>
     </properties>
 
     <dependencies>
